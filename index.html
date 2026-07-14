@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PositiveLeaders — Creating Leaders People Want To Listen To | by PositiveLeePeilin</title>
+<meta name="description" content="Enneagram-based leadership workshops, executive coaching and keynotes for corporate and HR leaders. Trusted by teams at Google, Resorts World Sentosa, Shangri-La and Credit Suisse. By Peilin Lee — professional speaker, executive coach and communication strategist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1626;
+    --ink-2:#16233B;
+    --ink-3:#1E2E4D;
+    --paper:#FAF7F0;
+    --paper-2:#F2EDE2;
+    --yellow:#FFC531;
+    --yellow-soft:#FFDD7A;
+    --aqua:#3EC8B9;
+    --aqua-deep:#1E9A8D;
+    --text:#22293A;
+    --muted:#5B6478;
+    --muted-light:#9AA7C0;
+    --line:rgba(14,22,38,.12);
+    --line-dark:rgba(250,247,240,.14);
+    --radius:18px;
+    --shadow:0 24px 60px -24px rgba(14,22,38,.28);
+    --font-display:'Fraunces',Georgia,serif;
+    --font-body:'Inter',-apple-system,'Segoe UI',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-body);color:var(--text);background:var(--paper);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  section{padding:104px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua-deep)}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--yellow);border-radius:2px}
+  .dark .eyebrow{color:var(--aqua)}
+  h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.12;color:var(--ink);letter-spacing:-.01em}
+  h1{font-size:clamp(2.5rem,5.2vw,4.15rem)}
+  h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:18px 0 20px}
+  h3{font-size:1.32rem;line-height:1.3}
+  .dark h1,.dark h2,.dark h3{color:var(--paper)}
+  .lede{font-size:1.13rem;color:var(--muted);max-width:640px}
+  .dark .lede{color:var(--muted-light)}
+  .accent{position:relative;white-space:nowrap}
+  .accent::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.08em;height:.34em;background:var(--yellow);opacity:.55;z-index:-1;border-radius:3px;transform:skewX(-8deg)}
+  .dark .accent::after{opacity:.85}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;border:none;font-family:var(--font-body)}
+  .btn-primary{background:var(--yellow);color:var(--ink);box-shadow:0 12px 28px -10px rgba(255,197,49,.55)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px -10px rgba(255,197,49,.65)}
+  .btn-ghost{background:transparent;color:var(--paper);border:1.5px solid var(--line-dark)}
+  .btn-ghost:hover{border-color:var(--aqua);color:var(--aqua)}
+  .btn-ghost-light{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-ghost-light:hover{border-color:var(--aqua-deep);color:var(--aqua-deep)}
+  .btn .arrow{transition:transform .18s ease}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  /* Nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,22,38,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dark)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.15}
+  .brand .word{font-family:var(--font-display);font-size:1.38rem;font-weight:700;color:var(--paper)}
+  .brand .word em{font-style:normal;color:var(--yellow)}
+  .brand .by{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-light)}
+  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+  .nav-links a{color:rgba(250,247,240,.78);text-decoration:none;font-size:14.5px;font-weight:500;transition:color .15s}
+  .nav-links a:hover{color:var(--yellow)}
+  .nav-cta{padding:11px 22px;font-size:14px}
+  .menu-btn{display:none;background:none;border:none;color:var(--paper);font-size:26px;cursor:pointer}
+
+  /* Hero */
+  .hero{background:radial-gradient(1200px 600px at 85% -10%,rgba(62,200,185,.14),transparent 60%),radial-gradient(900px 500px at -10% 110%,rgba(255,197,49,.10),transparent 55%),var(--ink);padding:190px 0 0;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-bottom:96px}
+  .hero-copy .lede{margin:26px 0 36px}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-visual{position:relative}
+  .hero-visual .frame{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .hero-visual .frame::after{content:"";position:absolute;inset:0;border-radius:var(--radius);border:1px solid rgba(250,247,240,.15);pointer-events:none}
+  .hero-visual::before{content:"";position:absolute;top:22px;left:-22px;right:22px;bottom:-22px;border-radius:var(--radius);background:linear-gradient(135deg,var(--yellow),var(--aqua));opacity:.9;z-index:0}
+  .hero-visual .frame{z-index:1}
+  .hero-visual img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  .hero-badge{position:absolute;z-index:2;bottom:-26px;left:-10px;background:var(--paper);border-radius:14px;padding:14px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+  .hero-badge .num{font-family:var(--font-display);font-size:1.7rem;font-weight:700;color:var(--ink)}
+  .hero-badge .lbl{font-size:12px;font-weight:600;color:var(--muted);line-height:1.35;text-transform:uppercase;letter-spacing:.06em}
+
+  /* Credibility strip */
+  .cred{background:rgba(250,247,240,.04);border-top:1px solid var(--line-dark);padding:26px 0}
+  .cred .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .cred .lbl{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-light);white-space:nowrap}
+  .cred ul{display:flex;gap:8px 34px;flex-wrap:wrap;list-style:none;align-items:center}
+  .cred li{font-family:var(--font-display);font-size:1.06rem;font-weight:600;color:rgba(250,247,240,.82);letter-spacing:.02em}
+
+  /* Problem */
+  .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px}
+  .p-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;position:relative;transition:transform .2s ease,box-shadow .2s ease}
+  .p-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .p-card .tag{font-family:var(--font-display);font-size:2.1rem;font-weight:700;color:var(--ink);display:block;margin-bottom:6px}
+  .p-card .tag small{font-size:1rem;color:var(--aqua-deep);font-family:var(--font-body);font-weight:600;letter-spacing:.04em}
+  .p-card h3{margin:10px 0 10px}
+  .p-card p{color:var(--muted);font-size:15.5px}
+  .p-card::before{content:"";position:absolute;top:0;left:30px;width:44px;height:4px;border-radius:0 0 4px 4px;background:var(--yellow)}
+  .foot-note{margin-top:26px;font-size:13px;color:var(--muted)}
+
+  /* Programs */
+  .programs{background:var(--ink);position:relative}
+  .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+  .prog{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:var(--radius);padding:38px 32px;display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease;position:relative}
+  .prog:hover{transform:translateY(-6px);border-color:rgba(255,197,49,.45)}
+  .prog.flag{background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border-color:rgba(62,200,185,.4)}
+  .prog .kind{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);margin-bottom:14px}
+  .prog h3{color:var(--paper);margin-bottom:12px}
+  .prog .desc{color:var(--muted-light);font-size:15px;margin-bottom:22px}
+  .prog ul{list-style:none;margin:0 0 28px;flex:1}
+  .prog li{padding:9px 0 9px 30px;position:relative;color:rgba(250,247,240,.85);font-size:14.5px;border-bottom:1px dashed rgba(250,247,240,.09)}
+  .prog li:last-child{border-bottom:none}
+  .prog li::before{content:"✓";position:absolute;left:0;top:8px;width:20px;height:20px;border-radius:50%;background:rgba(62,200,185,.16);color:var(--aqua);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .prog .meta{font-size:12.5px;color:var(--muted-light);margin-bottom:20px;display:flex;gap:14px;flex-wrap:wrap}
+  .prog .meta span{display:inline-flex;align-items:center;gap:6px}
+  .prog .meta b{color:var(--aqua)}
+  .prog .btn{justify-content:center}
+  .flag-pill{position:absolute;top:-13px;right:26px;background:var(--aqua);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:999px}
+
+  /* Method */
+  .method .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+  .method-sticky{position:sticky;top:110px}
+  .steps{display:flex;flex-direction:column;gap:0;counter-reset:step}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:24px;padding:34px 0;border-bottom:1px solid var(--line);counter-increment:step}
+  .step:first-child{padding-top:6px}
+  .step .n{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--ink);width:52px;height:52px;border-radius:50%;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;background:var(--paper)}
+  .step:nth-child(1) .n{background:var(--yellow);border-color:var(--yellow)}
+  .step:nth-child(2) .n{background:var(--yellow-soft);border-color:var(--yellow-soft)}
+  .step:nth-child(3) .n{background:var(--aqua);border-color:var(--aqua)}
+  .step h3{margin-bottom:8px}
+  .step p{color:var(--muted);font-size:15.5px}
+  .method-img{margin-top:34px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .method-img img{aspect-ratio:16/10;object-fit:cover;width:100%}
+
+  /* Quote band */
+  .band{position:relative;padding:0;overflow:hidden}
+  .band img{width:100%;height:520px;object-fit:cover;object-position:center 30%}
+  .band .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,22,38,.88) 0%,rgba(14,22,38,.55) 55%,rgba(14,22,38,.25) 100%)}
+  .band .content{position:absolute;inset:0;display:flex;align-items:center}
+  .band blockquote{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.3rem);color:var(--paper);max-width:640px;line-height:1.35;font-weight:500}
+  .band blockquote::before{content:"“";color:var(--yellow);font-size:1.4em;line-height:0;vertical-align:-.3em;margin-right:6px}
+  .band cite{display:block;font-family:var(--font-body);font-style:normal;font-size:14.5px;color:var(--muted-light);margin-top:18px}
+  .band cite b{color:var(--paper)}
+
+  /* Results */
+  .results{background:var(--paper-2)}
+  .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+  .t-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;display:flex;flex-direction:column;gap:18px}
+  .t-card .stars{color:var(--yellow);letter-spacing:3px;font-size:15px}
+  .t-card blockquote{font-size:15.5px;color:var(--text);flex:1;font-style:italic;line-height:1.7}
+  .t-card .who{display:flex;flex-direction:column}
+  .t-card .who b{font-size:15px;color:var(--ink)}
+  .t-card .who span{font-size:13px;color:var(--muted)}
+
+  /* About */
+  .about .wrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}
+  .about-visual{position:relative}
+  .about-visual .frame{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative;z-index:1}
+  .about-visual::before{content:"";position:absolute;top:-20px;right:-20px;width:60%;height:60%;background:radial-gradient(circle,rgba(255,197,49,.35) 2.5px,transparent 3px);background-size:18px 18px;z-index:0;border-radius:var(--radius)}
+  .about-visual img{width:100%;object-fit:cover}
+  .about p{color:var(--muted);margin-bottom:16px;font-size:15.8px}
+  .about .creds{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 32px}
+  .about .cred-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:13.5px;font-weight:600;color:var(--ink);display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+  .about .cred-item::before{content:"◆";color:var(--aqua-deep);font-size:11px;margin-top:4px}
+  .media-line{font-size:13px;color:var(--muted);margin-top:18px}
+  .media-line b{color:var(--ink)}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:56px auto 0}
+  details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden}
+  summary{padding:22px 26px;font-weight:600;font-size:16px;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:var(--font-display);font-size:22px;color:var(--aqua-deep);transition:transform .2s ease;flex-shrink:0}
+  details[open] summary::after{transform:rotate(45deg)}
+  details .a{padding:0 26px 24px;color:var(--muted);font-size:15px;line-height:1.7}
+
+  /* CTA / form */
+  .cta{background:radial-gradient(1000px 500px at 15% -20%,rgba(255,197,49,.12),transparent 55%),radial-gradient(900px 500px at 100% 120%,rgba(62,200,185,.12),transparent 55%),var(--ink)}
+  .cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+  .cta-copy p{color:var(--muted-light);margin:20px 0}
+  .cta-copy .alt{margin-top:30px;font-size:14.5px;color:var(--muted-light)}
+  .cta-copy .alt a{color:var(--aqua);text-decoration:none;font-weight:600}
+  .cta-copy .alt a:hover{text-decoration:underline}
+  .expect{list-style:none;margin-top:26px}
+  .expect li{padding:8px 0 8px 30px;position:relative;color:rgba(250,247,240,.85);font-size:14.5px}
+  .expect li::before{content:"→";position:absolute;left:0;color:var(--yellow)}
+  form{background:var(--paper);border-radius:var(--radius);padding:42px 40px;box-shadow:var(--shadow)}
+  form h3{margin-bottom:6px}
+  form .sub{font-size:14px;color:var(--muted);margin-bottom:26px}
+  .f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .f-group{margin-bottom:16px;display:flex;flex-direction:column;gap:6px}
+  label{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+  input,select,textarea{font-family:var(--font-body);font-size:15px;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--text);width:100%;transition:border-color .15s}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--aqua-deep)}
+  textarea{resize:vertical;min-height:96px}
+  form .btn{width:100%;justify-content:center;margin-top:8px}
+  .form-note{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center}
+
+  /* Footer */
+  footer{background:#0A111E;color:var(--muted-light);padding:64px 0 40px;border-top:1px solid var(--line-dark)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;margin-bottom:48px}
+  footer .brand .word{font-size:1.5rem}
+  footer p{font-size:14px;margin-top:16px;max-width:380px}
+  footer h4{color:var(--paper);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;font-family:var(--font-body)}
+  footer ul{list-style:none}
+  footer li{margin-bottom:11px}
+  footer a{color:var(--muted-light);text-decoration:none;font-size:14.5px;transition:color .15s}
+  footer a:hover{color:var(--yellow)}
+  .foot-bottom{border-top:1px solid var(--line-dark);padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Responsive */
+  @media (max-width:1000px){
+    .hero .wrap,.method .wrap,.about .wrap,.cta .wrap{grid-template-columns:1fr;gap:48px}
+    .prog-grid,.problem-grid,.t-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+    .method-sticky{position:static}
+    .foot-grid{grid-template-columns:1fr;gap:36px}
+    .hero{padding-top:150px}
+    .band img{height:440px}
+  }
+  @media (max-width:820px){
+    .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:var(--ink);flex-direction:column;padding:26px 28px;gap:20px;border-bottom:1px solid var(--line-dark)}
+    .nav-links.open{display:flex}
+    .menu-btn{display:block}
+    section{padding:76px 0}
+    .f-row{grid-template-columns:1fr}
+    .about .creds{grid-template-columns:1fr}
+    form{padding:32px 26px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="word">Positive<em>Leaders</em></span>
+      <span class="by">by PositiveLeePeilin</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#why">Why</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn btn-primary nav-cta">Book a discovery call</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero dark" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Leadership development for corporate &amp; HR leaders</span>
+      <h1>Creating leaders people want to <span class="accent">listen to.</span></h1>
+      <p class="lede">Practical communication and leadership strategies that transform how your teams connect, collaborate and lead — from a coach who spent 20 years inside blue-chip corporations, trusted by teams at Google, Resorts World Sentosa, Shangri-La and Credit Suisse.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Book a discovery call <span class="arrow">→</span></a>
+        <a href="#programs" class="btn btn-ghost">Explore programs</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="frame"><img src="assets/peilin-stage.jpg" alt="Peilin Lee delivering a leadership keynote on stage"></div>
+      <div class="hero-badge">
+        <span class="num">20</span>
+        <span class="lbl">Years leading in<br>blue-chip brands</span>
+      </div>
+    </div>
+  </div>
+  <div class="cred">
+    <div class="wrap">
+      <span class="lbl">Past clients include</span>
+      <ul>
+        <li>Google</li><li>Resorts World Sentosa</li><li>Shangri-La</li><li>Credit Suisse</li>
+      </ul>
+      <span class="lbl">TEDx Speaker · The Straits Times · CNA · Money FM</span>
+    </div>
+  </div>
+</header>
+
+<!-- WHY / PROBLEM -->
+<section id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">The problem HR sees first</span>
+      <h2>Capable teams stall for human reasons,<br>not technical ones.</h2>
+      <p class="lede">You've promoted your best performers. You've run the skills training. Yet the friction persists — because most leadership problems are actually self-awareness problems in disguise.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="p-card reveal">
+        <span class="tag">01 <small>/ Communication</small></span>
+        <h3>Messages sent ≠ messages received</h3>
+        <p>Leaders default to the style that works on people like themselves. Cross-functional trust erodes quietly — until it shows up in missed handoffs, rework and "alignment meetings" that align nothing.</p>
+      </div>
+      <div class="p-card reveal">
+        <span class="tag">02 <small>/ Engagement</small></span>
+        <h3>Managers set the emotional weather</h3>
+        <p>Gallup attributes about 70% of the variance in team engagement to the manager. A leader who doesn't understand their own patterns under stress passes that stress straight down the org chart.</p>
+      </div>
+      <div class="p-card reveal">
+        <span class="tag">03 <small>/ Succession</small></span>
+        <h3>High-potentials plateau at "presence"</h3>
+        <p>The feedback is always the same: "needs more executive presence." But presence isn't taught in a slide deck — it's built through self-awareness, self-acceptance and deliberate practice.</p>
+      </div>
+    </div>
+    <p class="foot-note">Engagement figure: Gallup, State of the American Manager research.</p>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs dark" id="programs">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Programs</span>
+      <h2>Three ways to bring PositiveLeaders<br>into your organisation.</h2>
+      <p class="lede">Every engagement starts with a discovery call to understand your team's context — then we tailor format, depth and follow-up to your goals.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog flag reveal">
+        <span class="flag-pill">Most popular</span>
+        <span class="kind">Flagship team workshop</span>
+        <h3>9 Styles of Leadership</h3>
+        <p class="desc">A high-energy, experiential half-day that helps leaders understand why they lead the way they do — and how to flex their style for stronger relationships and smoother alignment.</p>
+        <ul>
+          <li>Power: what leadership really means for each leader</li>
+          <li>The 9 Power Styles — direction, motivation &amp; accountability by type</li>
+          <li>The 3 Leadership Imperatives: set direction, mobilise others, own outcomes</li>
+          <li>Applied team exercise that reveals styles under pressure</li>
+          <li>Optional: individual Enneagram assessments + personalised reports</li>
+        </ul>
+        <div class="meta"><span><b>Format</b> Half-day (3h), in-person</span><span><b>For</b> Managers, dept heads &amp; HiPos</span></div>
+        <a href="#contact" class="btn btn-primary">Enquire about this workshop</a>
+      </div>
+      <div class="prog reveal">
+        <span class="kind">For senior leaders</span>
+        <h3>Executive 1-on-1 Coaching</h3>
+        <p class="desc">Confidential coaching for executives and high-potentials, anchored in an Enneagram debrief and built around real business situations.</p>
+        <ul>
+          <li>Enneagram report + 90-minute debrief session</li>
+          <li>Multi-session arc: awareness → acceptance → mastery</li>
+          <li>Stress-pattern work for pressure moments</li>
+          <li>Optional sponsor check-ins for HR visibility</li>
+        </ul>
+        <div class="meta"><span><b>Format</b> 3 or 6 session arcs</span><span><b>Where</b> In-person or video</span></div>
+        <a href="#contact" class="btn btn-ghost">Enquire about coaching</a>
+      </div>
+      <div class="prog reveal">
+        <span class="kind">For events &amp; leadership summits</span>
+        <h3>Keynotes &amp; Offsites</h3>
+        <p class="desc">High-energy, high-substance sessions for conferences, leadership offsites and retreats — from a TEDx speaker who has led teams inside the brands your leaders admire.</p>
+        <ul>
+          <li>Signature topic: 9 Styles of Leadership</li>
+          <li>Your Team Chemistry Blueprint — high-trust, high-output teams</li>
+          <li>The Inner Map of Effective Self Leadership</li>
+          <li>Tailored to your event theme — practical, not motivational fluff</li>
+        </ul>
+        <div class="meta"><span><b>Format</b> Keynote or facilitated block</span><span><b>Where</b> Your venue, regional</span></div>
+        <a href="#contact" class="btn btn-ghost">Enquire about speaking</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method" id="method">
+  <div class="wrap">
+    <div class="method-sticky reveal">
+      <span class="eyebrow">The method</span>
+      <h2>Self-awareness is a leadership system, not a personality quiz.</h2>
+      <p class="lede">The Enneagram maps the <em>motivation</em> behind behaviour — why a leader micromanages under stress, avoids conflict, or over-commits their team. That's what makes it actionable where generic profiling tools stop at description.</p>
+      <div class="method-img"><img src="assets/workshop-audience.jpg" alt="A full workshop room with participants raising their hands"></div>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <div>
+          <h3>Self-Awareness</h3>
+          <p>Each leader discovers their core motivations, fears and default patterns — including the specific behaviours that show up under pressure. Assessment plus debrief, so the insight lands personally, not generically.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <div>
+          <h3>Self-Acceptance</h3>
+          <p>Leaders stop fighting their wiring and start working with it. Defensiveness drops, feedback conversations open up, and teams get a shared, blame-free language for their differences.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <div>
+          <h3>Self-Mastery</h3>
+          <p>Insight becomes behaviour: adapting communication styles, catching stress patterns early, influencing without forcing authority. Each participant leaves with a personalised growth roadmap.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<div class="band">
+  <img src="assets/peilin-keynote-audience.jpg" alt="Peilin Lee presenting to a corporate audience">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="wrap">
+      <blockquote>I'm very critical when it comes to hearing a speech, and Peilin just ticked every single box. Her energy, her humour, her wit — just light up the whole room.
+        <cite><b>Eugene Seah</b> · President, Asia Professional Speakers Singapore</cite>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Results</span>
+      <h2>What leaders say after the room clears.</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Love Peilin's energy and vibe. She let us experience how our Enneagram styles impact our leadership and deepened our understanding of how we could work with others."</blockquote>
+        <div class="who"><b>Belicia Tan</b><span>Group General Manager, Manna Concepts Group</span></div>
+      </div>
+      <div class="t-card reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Super engaging, fun and incredibly insightful. Peilin made the topic feel accessible even for first-timers."</blockquote>
+        <div class="who"><b>Tjin Lee</b><span>Managing Director, Gusto Collective</span></div>
+      </div>
+      <div class="t-card reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Before Peilin's Enneagram workshop, we faced team miscommunication and a lack of understanding between colleagues. I came away with practical tools and a new lens on team dynamics. It sparked meaningful conversations about how we collaborate."</blockquote>
+        <div class="who"><b>Su-Mae Chia</b><span>Founder, BSKIN</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-visual reveal">
+      <div class="frame"><img src="assets/peilin-portrait.jpg" alt="Peilin Lee, founder of PositiveLeaders"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Professional speaker · Executive coach · Communication strategist</span>
+      <h2>Peilin Lee has sat in your leaders' seats.</h2>
+      <p>Most coaches talk about the corporate world. Peilin spent 20 years leading inside it — most recently as Head of Marketing for Nespresso Singapore, owning the market P&amp;L and leading a team of ten, after brand leadership roles at Johnson &amp; Johnson, Tiger Beer, and agency work for P&amp;G, Heineken and DBS.</p>
+      <p>That means she coaches with the texture of real corporate life: matrix organisations, regional stakeholders, restructures, performance cycles and the quiet politics of influence. Teams at Google, Resorts World Sentosa, Shangri-La and Credit Suisse have experienced her sessions. The Enneagram is her framework; lived leadership is her credibility.</p>
+      <div class="creds">
+        <div class="cred-item">Certified Associate Coach, International Association of Coaching Institutes (ICI)</div>
+        <div class="cred-item">Certified Enneagram practitioner — IEA-accredited Neuro-Linguistic Enneagram graduate</div>
+        <div class="cred-item">Certified NLP Practitioner, pursuing Master Practitioner certification</div>
+        <div class="cred-item">TEDx speaker · Chair of Brand &amp; Communications, Asia Professional Speakers Society</div>
+      </div>
+      <a href="#contact" class="btn btn-ghost-light">Work with Peilin <span class="arrow">→</span></a>
+      <p class="media-line">As seen &amp; heard on <b>TEDx</b>, <b>The Straits Times</b>, <b>Channel News Asia</b>, <b>Money 89.3 FM</b>, <b>Kiss 92FM</b>, <b>88.3JIA</b>, <b>Marketing-Interactive</b> and <b>Campaign</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">FAQ</span>
+      <h2>Questions HR &amp; L&amp;D leaders ask us.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Is the Enneagram rigorous enough for a corporate setting?</summary>
+        <div class="a">We use it as a facilitation and coaching framework, not a hiring or assessment instrument. Its value in a leadership context is practical: it gives teams a shared, blame-free language for motivation and stress behaviour, which is where most workplace friction actually lives. Every engagement pairs the framework with real business situations your leaders are navigating now.</div>
+      </details>
+      <details>
+        <summary>How is this different from MBTI or DISC workshops we've already run?</summary>
+        <div class="a">Most typing tools describe <em>what</em> people do. The Enneagram maps <em>why</em> — the core motivations and fears driving behaviour, and crucially, how each type shifts under stress. That's what makes it coachable: leaders don't just get a label, they get a specific, observable pattern to work on.</div>
+      </details>
+      <details>
+        <summary>What group sizes and formats do you support?</summary>
+        <div class="a">The 9 Styles of Leadership workshop is a half-day (3-hour) in-person session, ideal for department heads, managers and high-potential leaders — typically 8–25 participants. Keynotes scale to any audience size. Executive coaching is 1-on-1, in-person in Singapore or over video, in 3- or 6-session arcs. Multi-cohort rollouts can be scoped on the discovery call.</div>
+      </details>
+      <details>
+        <summary>How do you handle confidentiality in executive coaching?</summary>
+        <div class="a">Coaching conversations are confidential between coach and coachee. Where HR sponsors the engagement, we agree upfront on a check-in structure that shares themes and progress — never session content — so you get visibility without compromising the trust that makes coaching work.</div>
+      </details>
+      <details>
+        <summary>How is pricing structured?</summary>
+        <div class="a">Corporate engagements are scoped and quoted per programme, based on format, participant numbers and follow-up depth. You'll receive a clear proposal after the discovery call — suitable for procurement and L&amp;D budget processes.</div>
+      </details>
+      <details>
+        <summary>Can this fit into an existing leadership development programme?</summary>
+        <div class="a">Yes — 9 Styles of Leadership is often run as a module inside broader HiPo or leadership curricula, and executive coaching frequently follows a workshop as targeted support for selected leaders. We'll design around what you already have.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta dark" id="contact">
+  <div class="wrap">
+    <div class="cta-copy reveal">
+      <span class="eyebrow">Next step</span>
+      <h2>Book a 30-minute discovery call.</h2>
+      <p>No pitch deck, no pressure. We'll talk about your team, what's getting in the way, and whether PositiveLeaders is the right fit. If it's not, you'll leave with an honest recommendation anyway.</p>
+      <ul class="expect">
+        <li>Understand your team's context and goals</li>
+        <li>Explore the right format — workshop, coaching or keynote</li>
+        <li>Receive a tailored proposal within one week</li>
+      </ul>
+      <p class="alt">Prefer email? Reach Peilin directly at <a href="mailto:positiveleepeilin@gmail.com">positiveleepeilin@gmail.com</a> — replies within 48 hours.</p>
+    </div>
+    <form id="discoveryForm" class="reveal">
+      <h3>Request your discovery call</h3>
+      <p class="sub">Tell us a little about your team and we'll come prepared.</p>
+      <div class="f-row">
+        <div class="f-group"><label for="fname">Name</label><input id="fname" name="name" type="text" required placeholder="Your name"></div>
+        <div class="f-group"><label for="femail">Work email</label><input id="femail" name="email" type="email" required placeholder="you@company.com"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-group"><label for="fcompany">Company</label><input id="fcompany" name="company" type="text" required placeholder="Company name"></div>
+        <div class="f-group"><label for="frole">Your role</label><input id="frole" name="role" type="text" placeholder="e.g. HR Director"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label for="finterest">I'm interested in</label>
+          <select id="finterest" name="interest">
+            <option>9 Styles of Leadership workshop</option>
+            <option>Executive 1-on-1 coaching</option>
+            <option>Keynote or offsite</option>
+            <option>Not sure yet — let's talk</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label for="fsize">Team size</label>
+          <select id="fsize" name="size">
+            <option>1 (individual leader)</option>
+            <option>2–10</option>
+            <option>11–25</option>
+            <option>26–100</option>
+            <option>100+</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-group"><label for="fmsg">What's the challenge?</label><textarea id="fmsg" name="message" placeholder="A sentence or two about what you'd like to solve…"></textarea></div>
+      <button type="submit" class="btn btn-primary">Request discovery call <span class="arrow">→</span></button>
+      <p class="form-note">Submitting opens a pre-filled email to positiveleepeilin@gmail.com — nothing is stored on this page.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="word">Positive<em>Leaders</em></span>
+          <span class="by">by PositiveLeePeilin</span>
+        </a>
+        <p>Enneagram-based leadership development for corporate teams — workshops, executive coaching and keynotes that turn self-awareness into influence. Based in Singapore, speaking regionally.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#why">Why PositiveLeaders</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:positiveleepeilin@gmail.com">positiveleepeilin@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/peilinlee/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/positiveleepeilin/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://positiveleepeilin.com" target="_blank" rel="noopener">PositiveLeePeilin — personal coaching</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 PositiveLeaders · PositiveLeePeilin. All rights reserved.</span>
+      <span>9 Styles of Leadership™ workshop · Singapore</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Discovery form → pre-filled email
+  document.getElementById('discoveryForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const v = id => document.getElementById(id).value;
+    const subject = encodeURIComponent('Discovery call request — ' + v('fcompany'));
+    const body = encodeURIComponent(
+      'Name: ' + v('fname') + '\n' +
+      'Work email: ' + v('femail') + '\n' +
+      'Company: ' + v('fcompany') + '\n' +
+      'Role: ' + v('frole') + '\n' +
+      'Interested in: ' + v('finterest') + '\n' +
+      'Team size: ' + v('fsize') + '\n\n' +
+      'Challenge:\n' + v('fmsg') + '\n\n' +
+      'Sent via the PositiveLeaders website.'
+    );
+    window.location.href = 'mailto:positiveleepeilin@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+</body>
+</html>
